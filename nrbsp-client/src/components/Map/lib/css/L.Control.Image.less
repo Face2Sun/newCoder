@@ -1,0 +1,56 @@
+.leaflet-image-show{
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background-color: rgba(255,255,255,1);
+	background-image: url('./images/print_black.png');
+	border-radius: 4px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.leaflet-control-image{
+	position: absolute;
+	top: 0px;
+	right: 30px;
+	height: 25px;
+	width: 49px;
+	margin-top: -2px;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	overflow: hidden;
+	animation:image-animation 0.2s;
+	-webkit-animation:image-animation 0.2s; 
+}
+@keyframes image-animation
+{
+	from {width:0px;height: 0px;}
+	to {width:49px;height: 25px;}
+}
+
+@-webkit-keyframes image-animation /* Safari and Chrome */
+{
+	from {width:0px;height: 0px;}
+	to {width:49px;height: 25px;}
+}
+.leaflet-control-image>div{
+	border: 1px solid #CCCCCC;
+	float: left;
+	width: 23px;
+	height: 21px;
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.leaflet-control-image>div:not(:first-child){
+	margin-left: -1px;
+}
+.leaflet-control-image>div:first-child{
+	background-image: url('./images/image_black.png');
+}
+.leaflet-control-image>div:nth-child(2){
+	background-image: url('./images/print_black.png');
+}

@@ -1,0 +1,270 @@
+// 测量控件样式
+.leaflet-measure-show{
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background-color: rgba(255,255,255,1);
+	background-image: url('./images/distance_black.png');
+	border-radius: 4px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.leaflet-control-measure{
+	position: absolute;
+	right: 30px;
+	top: 0px;
+	height: 25px;
+	width: 72px;
+	margin-top: -2px;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	overflow: hidden;
+	animation:measure-animation 0.2s;
+	-webkit-animation:measure-animation 0.2s; /* Safari and Chrome */
+}
+@keyframes measure-animation
+{
+	from {width:0px;height: 0px;}
+	to {width:71px;height: 25px;}
+}
+
+@-webkit-keyframes measure-animation /* Safari and Chrome */
+{
+	from {width:0px;height: 0px;}
+	to {width:71px;height: 25px;}
+}
+.leaflet-control-measure>div{
+	border: 1px solid #CCCCCC;
+	float: left;
+	width: 23px;
+	height: 21px;
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.leaflet-control-measure>div:first-child{
+	background-image: url('./images/distance_black.png');
+}
+.leaflet-control-measure>.leaflet-control-lengthActive:first-child{
+	background-color: #000000;
+	background-image: url('./images/length.png');
+}
+.leaflet-control-measure>div:nth-child(2){
+	background-image: url('./images/area_black.png');
+}
+.leaflet-control-measure>.leaflet-control-areaActive:nth-child(2){
+	background-color: #000000;
+	background-image: url('./images/area.png');
+}
+.leaflet-control-measure>div:nth-child(3){
+	background-image: url('./images/delete_black.png');
+}
+.leaflet-control-measure>div:not(:first-child){
+	margin-left: -1px;
+}
+.leaflet-measure-noDefault{
+	width: 0px;
+	height: 0px;
+}
+.leaflet-measure-measureTooltip{
+	white-space:nowrap; 
+	float: left;
+	margin-left: 15px;
+	margin-top: -5px;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 3px;
+	box-shadow: 2px 2px 5px #888888;
+	color: #000000;
+	padding: 2px 5px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	cursor: default;
+}
+.leaflet-measure-deleteBtn{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-top: -2px;
+	margin-left: 10px; 
+	vertical-align: middle;
+	cursor: pointer !important;
+	background-image: url('./images/clearGray.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+.leaflet-swipe-show{
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background-color: rgba(255,255,255,1);
+	background-image: url('./images/swipe_black.png');
+	border-radius: 4px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.leaflet-control-swipe{
+	position: absolute;
+	top: 0px;
+	right: 30px;
+	height: 25px;
+	width: 25px;
+	margin-top: -2px;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	overflow: hidden;
+	animation:swipe-animation 0.2s;
+	-webkit-animation:swipe-animation 0.2s; /* Safari and Chrome */
+}
+.leaflet-control-swipe>div{
+	border: 1px solid #CCCCCC;
+	float: left;
+	width: 21px;
+    height: 21px;
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.leaflet-control-swipe>div:not(:first-child){
+	margin-left: -1px;
+}
+.leaflet-control-swipe>div:first-child{
+	background-image: url('./images/config_black.png');
+}
+.leaflet-control-swipe>.leaflet-control-configActive:first-child{
+	background-color: #000000;
+	background-image: url('./images/config.png');
+}
+@keyframes swipe-animation
+{
+	from {width:0px;height: 0px;}
+	to {width:25px;height: 25px;}
+}
+
+@-webkit-keyframes swipe-animation /* Safari and Chrome */
+{
+	from {width:0px;height: 0px;}
+	to {width:25px;height: 25px;}
+}
+
+.leaflet-swipe-swipeConfigWrapper{
+	position: absolute;
+	bottom: 5px;
+	right: 70px;
+	z-index: 1000;
+	width: 206px;
+    height: 146px;
+	background-color: rgba(149,185,230,1);
+	border-radius: 10px;
+	padding: 5px;
+	color: #000000;
+}
+.leaflet-swipe-swipeConfigWrapper>div:not(:first-child){
+	width: 100%;
+	padding: 0px 10px;
+}
+.leaflet-swipe-swipeConfigWrapper>div:first-child{
+	overflow: hidden;
+	height: 20px;
+	line-height: 20px;
+	font-size: 16px;
+	color: #0078A8;
+	font-weight: bold;
+}
+.leaflet-swipe-swipeConfigWrapper>div:first-child>span:nth-child(2){
+	float: right;
+	cursor: pointer;
+}
+.leaflet-swipe-swipeConfigWrapper>div:not(:first-child){
+	padding-top: 5px;
+	height: 26px;
+	line-height: 26px;
+	font-size: 14px;
+}
+.leaflet-swipe-swipeConfigWrapper>div:nth-child(2)>select{
+	outline: none;
+	color: #000000;
+	width: 120px;
+	height: 20px;
+}
+.leaflet-swipe-swipeConfigWrapper>div:nth-child(3)>label{
+	font-weight:normal;
+	margin-right:15px;
+}
+.leaflet-swipe-swipeConfigWrapper>div input[type="range"]{
+	display: inline-block;
+    width: 120px;
+    vertical-align: middle;
+}
+.leaflet-swipe-swipeLayerBorder{
+	position: absolute;
+	background-color: #FFFFFF;
+	width: 100px;
+	height: 100px;
+	z-index: 800;
+}
+
+// 全屏显示控件样式
+.leaflet-control-fullscreen a {
+  background:#fff url(./images/fullscreen.png) no-repeat 0 0;
+  background-size:26px 52px;
+  }
+  .leaflet-touch .leaflet-control-fullscreen a {
+    background-position: 2px 2px;
+    }
+  .leaflet-fullscreen-on .leaflet-control-fullscreen a {
+    background-position:0 -26px;
+    }
+  .leaflet-touch.leaflet-fullscreen-on .leaflet-control-fullscreen a {
+    background-position: 2px -24px;
+    }
+
+/* Do not combine these two rules; IE will break. */
+.leaflet-container:-webkit-full-screen {
+  width:100%!important;
+  height:100%!important;
+  }
+.leaflet-container.leaflet-fullscreen-on {
+  width:100%!important;
+  height:100%!important;
+  }
+
+.leaflet-pseudo-fullscreen {
+  position:fixed!important;
+  width:100%!important;
+  height:100%!important;
+  top:0!important;
+  left:0!important;
+  z-index:99999;
+  }
+
+@media
+  (-webkit-min-device-pixel-ratio:2),
+  (min-resolution:192dpi) {
+    .leaflet-control-fullscreen a {
+      background-image:url(./images/fullscreen@2x.png);
+    }
+  }
+
+	// 鼠标位置样式
+.leaflet-container .leaflet-control-mouseposition {
+		background-color: rgba(255, 255, 255, 0.7);
+		box-shadow: 0 0 5px #bbb;
+		padding: 0 5px;
+		margin:0;
+		color: #333;
+		font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+	
